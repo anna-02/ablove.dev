@@ -1,3 +1,8 @@
+html {
+    font-size: 14px;
+    /* default is ~16px; lower makes all rem/em-based text smaller */
+}
+
 /* Publications list font size */
 .archive__item,
 .archive__item-title,
@@ -24,15 +29,14 @@
 .archive__item-title {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.5em;
-
+    margin-bottom: 0em;
+    padding-bottom: 0.25em !important;
 }
 
-
-/* Remove underline from publication links */
-.archive__item-title a {
+a {
     text-decoration: none;
 }
+
 
 /* Tighter line height in Publications default 1.5 */
 .archive__item {
