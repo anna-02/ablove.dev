@@ -215,6 +215,48 @@ screen and (max-width: 900px) {
     }
 }
 
+
+/* Sticky footer: no whitespace below footer, not fixed */
+html,
+body {
+    height: 100%;
+}
+
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Your main content wrapper — use whichever exists in your layout */
+.initial-content,
+#main,
+.page {
+    flex: 1 0 auto;
+}
+
+/* Footer gets pushed to the bottom when content is short */
+.site-footer {
+    margin-top: auto;
+}
+
+/* Remove unexpected bottom gaps */
+body,
+.site,
+.initial-content,
+#main,
+.page,
+.page__inner-wrap,
+.wrapper {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure the *last* element on a page can't push extra space */
+.page__content> :last-child {
+    margin-bottom: 0;
+}
+
 /* Force the masthead to be fixed, even if something sets it relative */
 
 
