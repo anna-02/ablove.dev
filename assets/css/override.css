@@ -71,8 +71,8 @@ hr {
 
 .page__inner-wrap,
 .archive {
-    margin-right: 4em;
-    padding-right: 4em;
+    margin-right: 0em;
+    padding-right: 8em;
 }
 
 
@@ -114,6 +114,7 @@ hr {
     /* full viewport height */
     /* padding: 1.5em; */
     margin-left: 0 !important;
+    max-width: 300px;
     /* remove any default margin */
     border-radius: 0;
     opacity: 1 !important;
