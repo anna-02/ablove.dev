@@ -1,6 +1,4 @@
----
----
-
+--- ---
 /*
  *    Minimal Mistakes Jekyll Theme
  *
@@ -12,9 +10,9 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-// @import "vendor/font-awesome/fontawesome";
-// @import "vendor/font-awesome/solid";
-// @import "vendor/font-awesome/brands";
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
 
 // @import "vendor/breakpoint/breakpoint"; // media query mixins
 // @import "variables";

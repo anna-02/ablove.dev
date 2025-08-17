@@ -121,6 +121,10 @@ hr {
 
 }
 
+.sidebar .author__bio {
+    max-width: 200px;
+}
+
 .sidebar .author__avatar {
     max-width: none;
     width: 200px;
