@@ -1,17 +1,238 @@
-body, .sidebar p,.page__footer-follow li{
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 200;
+/* Publications list font size */
+.archive__item,
+.archive__item-title,
+.archive__item-excerpt {
+    font-size: 0.9rem;
+    /* text-wrap: normal;s
+    white-space: normal; */
+    /* tweak as needed */
+}
+
+.archive__item-excerpt {
+    white-space: normal;
+    text-wrap: normal;
+
+
+}
+
+.archive__item>p {
+    margin: .1em !important;
+    padding: .1em !important;
+}
+
+/* Publication titles slightly larger */
+.archive__item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+
+}
+
+
+/* Remove underline from publication links */
+.archive__item-title a {
+    text-decoration: none;
+}
+
+/* Tighter line height in Publications default 1.5 */
+.archive__item {
+    line-height: 1em;
+    padding-bottom: 0.2em;
+}
+
+
+/* Thicker horizontal rule */
+/* Keep hr color, just make it thicker */
+/* Stronger horizontal rule */
+hr {
+    border: none;
+    /* remove default */
+    border-top: 2px solid lightgray;
+    /* black, thicker line */
+    margin: 2em 0;
+    /* spacing above/below */
+}
+
+/* Let the main content expand fully next to the sidebar */
+.layout--single .page__inner-wrap,
+.layout--home .page__inner-wrap,
+.page__inner-wrap,
+.page,
+.archive {
+    max-width: none !important;
+    width: 100% - 300px !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+/* Make the text container itself use all that space */
+.page__content {
+    max-width: none !important;
+    width: 100% - 300px !important;
+}
+
+
+
+
+/* .archive__item-excerpt {
+    margin-top: 0.25em;
+} */
+
+
+/* Ensure the outer container isn't capping width */
+.initial-content,
+.site {
+    max-width: 100% - 300px !important;
+}
+
+.initial-content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Remove the top border line from the footer
+.page__footer {
+    margin-top: 0 !important;
+} */
+
+.sidebar {
+    font-size: 1.1rem;
+    /* background: lightgray; */
+    /* background: linear-gradient(to bottom, #f5f5f5, #e0e0e0); */
+    /* min-height: 100vh; */
+    /* full viewport height */
+    /* padding: 1.5em; */
+    margin-left: 0 !important;
+    /* remove any default margin */
+    border-radius: 0;
+    opacity: 1 !important;
+
+}
+
+.sidebar .author__avatar {
+    max-width: none;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-left: 0px;
+
+}
+
+.sidebar .author__avatar img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+/* When sidebar stacks on top (theme collapses ~64em). Add backups and !important. */
+@media screen and (max-width: 64em),
+screen and (max-width: 1024px),
+screen and (max-width: 900px) {
+    .sidebar .author__avatar {
+        width: 64px !important;
+        height: 64px !important;
     }
-  
-  h1, h2, h3, h4, h5, .site-title, .site-nav, li.masthead__menu-item--lg, .masthead__inner-wrap, .sidebar .author__name{
-    font-family: "IBM Plex Mono", monospace;
+}
+
+.sidebar .author__name {
+    color: #000000 !important;
+}
+
+/* Fix overlapping publication text on small screens */
+@media screen and (max-width: 64em),
+screen and (max-width: 1024px),
+screen and (max-width: 900px) {
+    .archive__item {
+        display: block !important;
+        /* stack vertically instead of flex row */
+        height: auto !important;
+        /* let height expand to fit text */
+    }
+
+    .archive__item p {
+        line-height: 1.4 !important;
+        /* safe line height for small screens */
+        margin-bottom: 0.5em;
+        /* keep space between paragraphs */
+        overflow: visible;
+        /* allow text to expand naturally */
+    }
+}
+
+/* Force the masthead to be fixed, even if something sets it relative */
+.masthead,
+.masthead[style] {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+:root {
+    --masthead-h: 80px;
+}
+
+/* set this to your header’s actual height */
+
+.site::before,
+.initial-content::before,
+#main::before {
+    content: "";
+    display: block;
+    height: var(--masthead-h);
+}
+
+/* If a media query is changing it at smaller sizes, lock it there too */
+@media screen and (max-width: 64em) {
+
+    .masthead,
+    .masthead[style] {
+        position: fixed !important;
+    }
+}
+
+/* Force the masthead to be fixed, even if something sets it relative */
+
+
+/* body,
+.sidebar p,
+.page__footer-follow li {
+    font-family: Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.site-title,
+.site-nav,
+li.masthead__menu-item--lg,
+.masthead__inner-wrap,
+.sidebar .author__name {
+    font-family: Helvetica, sans-serif;
     font-weight: 400;
-  }
+}
 
 
 .page__footer-copyright {
-  color: rgb(91, 91, 91);
+    color: rgb(91, 91, 91);
 }
+
+html,
+body {
+    background-color: #ffffff !important;
+} */
 
 /* .fa, .fas, .fab, .far {
   font-family: 'FontAwesome';

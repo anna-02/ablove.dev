@@ -7,7 +7,7 @@
 # server process.
 
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: default
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Anna Ablove"
@@ -23,7 +23,7 @@ github: [metadata]
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile2.png"
+  avatar           : "profile3.jpeg"
   name             : "Anna Ablove"
   pronouns         : # example: "she/her"  
   bio              : "CSE PhD Candidate at the Unviersity of Michigan :)"

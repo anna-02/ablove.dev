@@ -86,7 +86,7 @@ for row, item in publications.iterrows():
     if len(str(item.paper_url)) > 5:
         md += "\npaperurl: '" + item.paper_url + "'"
     
-    md += "\ncitation: '" + html_escape(item.citation) + "'"
+    # md += "\ncitation: '" + html_escape(item.citation) + "'"
     
     md += "\n---"
     
@@ -101,12 +101,24 @@ for row, item in publications.iterrows():
     with open('citations.json') as f:
         citation=json.load(f)[item.url_slug]
     
+    # md += f"""\n<details>
+    #                 <summary><i>bib</i></summary>
+    #                 <pre style="white-space: pre-wrap">
+    #                 {citation}
+    #                 </pre>
+    #                 </details>"""
+    key = item.url_slug
     md += f"""\n<details>
-                    <summary><i>bib</i></summary>
-                    <pre style="white-space: pre-wrap">
-                    {citation}
-                    </pre>
-                    </details>"""
+            <summary><i>bib</i></summary>
+            <div style="position: relative">
+                <pre style="white-space: pre-wrap; margin: 0"><code id="{key}-bib">{citation}</code></pre>
+            </div>
+            <button onclick="navigator.clipboard.writeText(document.getElementById('{key}-bib').innerText)" 
+                        style="position: absolute; font-size: 0.8em; cursor: pointer;">
+                Copy
+                </button>
+            </details>
+            """
     
     # md += "\nRecommended citation: " + item.citation
     
