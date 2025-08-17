@@ -65,8 +65,14 @@ hr {
 .archive {
     max-width: none !important;
     width: 100% - 300px !important;
-    margin-right: 0 !important;
-    padding-right: 0 !important;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.page__inner-wrap,
+.archive {
+    margin-right: 4em;
+    padding-right: 4em;
 }
 
 
