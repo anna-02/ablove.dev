@@ -1,7 +1,11 @@
 html {
-    font-size: 14px;
+    font-size: 16px;
     /* default is ~16px; lower makes all rem/em-based text smaller */
 }
+
+/* .page__content>p {
+    color: slategrey;
+} */
 
 /* Publications list font size */
 .archive__item,
@@ -17,12 +21,12 @@ html {
     white-space: normal;
     text-wrap: normal;
 
-
 }
 
 .archive__item>p {
     margin: .1em !important;
     padding: .1em !important;
+    /* color: slategrey; */
 }
 
 /* Publication titles slightly larger */
@@ -73,6 +77,7 @@ hr {
 .archive {
     margin-right: 0em;
     padding-right: 8em;
+    padding-left: 1em;
 }
 
 
@@ -80,6 +85,7 @@ hr {
 .page__content {
     max-width: none !important;
     width: 100% - 300px !important;
+
 }
 
 
@@ -114,14 +120,18 @@ hr {
     /* full viewport height */
     /* padding: 1.5em; */
     margin-left: 0 !important;
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 200px;
     /* remove any default margin */
     border-radius: 0;
     opacity: 1 !important;
 
 }
 
-.sidebar .author__bio {
+
+/*end of experiments*/
+
+.sidebar .author__content {
     width: 200px !important;
 }
 
@@ -152,6 +162,11 @@ screen and (max-width: 900px) {
         width: 64px !important;
         height: 64px !important;
     }
+
+    #sidebar-band {
+        background: transparent;
+    }
+
 }
 
 .sidebar .author__name {
@@ -169,7 +184,7 @@ screen and (max-width: 900px) {
         /* let height expand to fit text */
     }
 
-    .archive__item p {
+    .archive__item>p {
         line-height: 1.4 !important;
         /* safe line height for small screens */
         margin-bottom: 0.5em;

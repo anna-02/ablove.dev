@@ -1,0 +1,45 @@
+/* Make sidebar a full-height colored column */
+/* === Full-height left column color/gradient, independent of layout === */
+
+/* Content keeps its own white bg; wrappers stay transparent so the band shows */
+.site,
+.initial-content,
+.page,
+.page__inner-wrap,
+.sidebar {
+    background: transparent !important;
+}
+
+.page__content {
+    background: #fff;
+    /* keep content readable */
+    position: relative;
+    z-index: 2;
+}
+
+/* Sidebar sits above the band; no extra bg */
+.sidebar {
+    position: relative;
+    z-index: 3;
+}
+
+/* The band itself (created by JS below) */
+#sidebar-band {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--sbw, 400px);
+    /* updated by JS to match real sidebar width */
+    background: linear-gradient(to bottom, lightgray, slategrey);
+    pointer-events: none;
+    z-index: -1;
+    /* below sidebar, above transparent wrappers */
+}
+
+/* Make sure header/footer are above the band */
+.masthead,
+.site-footer {
+    position: relative;
+    z-index: 4;
+}

@@ -21,11 +21,34 @@
 <meta name="msapplication-TileImage" content="{{ base_path }}/images/mstile-144x144.png?v=M44lzPylqQ">
 <meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml?v=M44lzPylqQ">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css" />
 
 
 <!-- Support for MatJax -->
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- <script>
+    (function () {
+        function syncSidebarBand() {
+            var sb = document.querySelector('.sidebar');
+            if (!sb) return;
 
+            var band = document.getElementById('sidebar-band');
+            if (!band) {
+                band = document.createElement('div');
+                band.id = 'sidebar-band';
+                document.body.appendChild(band);
+            }
+
+            var w = sb.getBoundingClientRect().width;
+            document.documentElement.style.setProperty('--sbw', w + 'px');
+        }
+
+        window.addEventListener('load', syncSidebarBand);
+        window.addEventListener('resize', syncSidebarBand);
+        // Some themes reflow after fonts/nav load—poke it again:
+        document.addEventListener('readystatechange', syncSidebarBand);
+        setTimeout(syncSidebarBand, 0);
+    })();
+</script> -->
 <!-- end custom head snippets -->

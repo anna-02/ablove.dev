@@ -52,9 +52,18 @@
 
       {% if author.email %}
         <li>
-          <a href="mailto:{{ author.email }}" rel="me" class="u-email">
+          <!-- <a href="mailto:{{ author.email }}" rel="me" class="u-email">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email!" }}</span> -->
+            <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{{ author.email }}').then(() => { 
+                    const label = this.querySelector('.label'); 
+                    label.textContent = 'Copied aablove@umich.edu!'; 
+                    setTimeout(() => { label.textContent = '{{ site.data.ui-text[site.locale].email_label | default: &quot;Email&quot; }}'; }, 2000); 
+                });" rel="me" class="u-email">
+                    <meta itemprop="email" content="{{ author.email }}" />
+                    <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i>
+                    <span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+                </a>
           </a>
         </li>
       {% endif %}
