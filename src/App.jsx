@@ -22,7 +22,7 @@ const PROFILE = {
   github: "https://github.com/anna-02",
   linkedin: "https://www.linkedin.com/in/annaablove/",
   cv: "/cv.pdf",
-  headshot: "src/images/profile3.jpeg",
+  headshot: "/images/profile3.jpeg",
 }
 
 const A = ({ href, children }) => (
