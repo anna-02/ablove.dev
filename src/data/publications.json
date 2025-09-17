@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ablove-2024-cuba-embargo",
+    "type": "paper-conference",              
+    "title": "Digital Discrimination of Users in Sanctioned States: The Case of the Cuba Embargo",
+    "author": [
+      {"family": "Ablove", "given": "Anna"},
+      {"family": "Chandrashekaran", "given": "Shreyas"},
+      {"family": "Le", "given": "H."},
+      {"family": "Sundara Raman", "given": "R."},
+      {"family": "Ramesh", "given": "R."},
+      {"family": "Oppenheimer", "given": "H."},
+      {"family": "Ensafi", "given": "Roya"}
+    ],
+    "container-title": "USENIX Security Symposium",
+    "issued": {"date-parts": [[2024]]},
+    "URL": "https://www.usenix.org/system/files/sec24summer-prepub-ablove.pdf"
+  },
+  {
+    "id": "ablove-2026-llm-filtering",
+    "type": "paper-conference",
+    "title": "Characterizing Overt Filtering in Chinese LLM Services",
+    "author": [{"family": "Ablove", "given": "Anna"}],
+    "container-title": "NDSS (target)",
+    "issued": {"date-parts": [[2026]]}
+  }
+]

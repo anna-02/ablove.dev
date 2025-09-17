@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Custom theme bits */
+:root {
+  --bg-warm: #ffffff; /* warm white */
+  --text-main: #111111;
+  --link: #0a58ca;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg-warm);
+  color: var(--text-main);
+}
+
+/* Set font stack site-wide to your specified serif */
+.font-serif-stack {
+  font-family: "TeXGyrePagella","Palatino Linotype","Book Antiqua",Palatino,serif;
+}
+
+/* in your CSS or as a Tailwind custom class */
+.double-border {
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd;
+  /* box-shadow: 0 0 0 4px #fff, 0 0 0 5px #ddd; */
+}
+
+.tlink {
+    color: darkblue;
+    font-weight: bold;
+}
+.tlink:hover {
+    text-decoration: underline;
+}
+
