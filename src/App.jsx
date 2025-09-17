@@ -39,8 +39,8 @@ const Li = ({ children }) => <li className="leading-relaxed">{children}</li>
 
 export default function App() {
   return (
-    <main className="min-h-screen font-serif-stack">
-      <div className="w-full pl-6 py-10">
+ <main className="min-h-screen font-serif-stack">
+   <div className="max-w-6xl mx-auto px-6 md:px-10 py-10">
         {/* Mobile header with horizontal padding */}
         <header className="lg:hidden flex items-center gap-4 mb-8">
           {/* <img
@@ -55,7 +55,7 @@ export default function App() {
         </header>
 
         {/* Grid layout on md+; using ps-* for left gutter */}
-        <div className="grid lg:grid-cols-[320px_minmax(0,1fr)] gap-8 md:gap-12">
+        <div className="grid lg:grid-cols-[280px_minmax(0,1fr)] items-start gap-8 md:gap-12">
           {/* Sidebar always on left, with gutter from ps-* \./ps-6 md:ps-10 */}
           
             <aside className="hidden lg:block fixed sticky top-16 left-0 self-start h-fit">
