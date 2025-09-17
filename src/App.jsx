@@ -42,7 +42,7 @@ export default function App() {
     <main className="min-h-screen font-serif-stack">
       <div className="w-full pl-6 py-10">
         {/* Mobile header with horizontal padding */}
-        <header className="lg:hidden flex items-center gap-4 mb-8 px-4">
+        <header className="lg:hidden flex items-center gap-4 mb-8">
           {/* <img
             src={PROFILE.headshot}
             alt="Anna Ablove headshot :)"
@@ -55,7 +55,7 @@ export default function App() {
         </header>
 
         {/* Grid layout on md+; using ps-* for left gutter */}
-        <div className="grid lg:grid-cols-[320px_minmax(0,1fr)] gap-8 md:gap-12 ps-10">
+        <div className="grid lg:grid-cols-[320px_minmax(0,1fr)] gap-8 md:gap-12">
           {/* Sidebar always on left, with gutter from ps-* \./ps-6 md:ps-10 */}
           
             <aside className="hidden lg:block fixed sticky top-16 left-0 self-start h-fit">
