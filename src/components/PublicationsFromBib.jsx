@@ -201,7 +201,7 @@ export default function PublicationsFromBib() {
                 {/* BibTeX button */}
                 <button
                   onClick={() => setOpenBib(openBib === p.id ? null : p.id)}
-                  className="text-sm px-2 py-1 border border-zinc-400 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                  className="text-sm px-2 py-1 border border-zinc-400 rounded hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800"
                 >
                   BibTeX
                 </button>
