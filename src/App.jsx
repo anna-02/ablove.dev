@@ -44,7 +44,7 @@ const Li = ({ children }) => <li className="leading-relaxed">{children}</li>
 export default function App() {
   return (
  <main className="min-h-screen font-serif-stack">
-   <div className="max-w-9/10 mx-auto px-6 md:px-10 py-10 pe-10">
+   <div className="md:max-w-9/10 mx-auto px-6 md:px-10 py-10 md:pe-10">
         {/* Mobile header with horizontal padding */}
         <header className="lg:hidden flex items-center gap-4 mb-8">
           {/* <img
@@ -94,7 +94,7 @@ export default function App() {
             </aside>
 
           {/* Content column—not full width, capped */}
-          <section className="min-w-0 md:max-w-4xl justify-self-start pr-16">
+          <section className="min-w-0 md:max-w-4xl justify-self-start md:pr-16">
             {/* Title for md+ to align with sidebar top */}
             {/* <div className="hidden md:block mb-6">
               <h1 className="text-3xl font-semibold tracking-tight">{PROFILE.name}</h1>
