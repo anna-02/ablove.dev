@@ -5,7 +5,7 @@ export const updates = [
   {
     date: "Aug 2024",
     sortDate: "2024-08-01",
-    text: `Digital Discrimination of Users in Sanctioned States: The Case of the Cuba Embargo received a <a href="https://www.usenix.org/conference/usenixsecurity24" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80"> Distinguished Paper Award</a> at USENIX 2024!`,
+    text: `Digital Discrimination of Users in Sanctioned States: The Case of the Cuba Embargo received a <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/ablove" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80"> Distinguished Paper Award</a> at USENIX 2024!`,
   },
     {
     date: "Nov 2024",
