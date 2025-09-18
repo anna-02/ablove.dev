@@ -1,6 +1,8 @@
 // src/App.jsx
 
 import React from 'react'
+import { Mail, Github, Linkedin, FileText } from "lucide-react";
+
 // in App.jsx
 import Publications from "./components/PublicationsFromBib";
 import Service from "./components/Service";
@@ -9,6 +11,7 @@ import Honors from "./components/Honors";
 import Grants from "./components/Grants";
 import Articles from "./components/Articles";
 import Media from "./components/Media";
+import Repos from "./components/Repos";
 
 
 
@@ -68,14 +71,24 @@ export default function App() {
                 <div className="font-semibold text-xl text-black">{PROFILE.name}</div>
                 <div className="italic font-light tracking-wide">{PROFILE.tagline}</div>
                 {/*<span className="font-medium uppercase text-xs tracking-widest">Email:</span> */}
-                <div><A href={PROFILE.emailHref} className="text-zinc-600 hover:text-zinc-800">{PROFILE.emailText}</A></div>
-                <div className="space-x-2">
-                <A href={PROFILE.linkedin} className="text-zinc-600 hover:text-zinc-800">LinkedIn</A>
-                <span>•</span>
-                <A href={PROFILE.github} className="text-zinc-600 hover:text-zinc-800">GitHub</A>
-                <span>•</span>
-                <A href={PROFILE.cv} className="text-zinc-600 hover:text-zinc-800">CV</A>
-                </div>
+            <ul className="space-y-2 text-base">
+                <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.emailHref}>{PROFILE.emailText}</A>
+                </li>
+                <li className="flex items-center gap-2">
+                <Linkedin className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.linkedin}>LinkedIn</A>
+                </li>
+                <li className="flex items-center gap-2">
+                <Github className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.github}>GitHub</A>
+                </li>
+                <li className="flex items-center gap-2">
+                <FileText className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.cv}>CV</A>
+                </li>
+            </ul>
             </div>
             </aside>
 
@@ -100,7 +113,7 @@ export default function App() {
             <Publications />
             <Articles/>
             <Media/>
-
+            {/* <Repos /> */}
             <Service />
             <Grants />
             <Honors />
