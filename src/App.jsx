@@ -12,6 +12,7 @@ import Grants from "./components/Grants";
 import Articles from "./components/Articles";
 import Media from "./components/Media";
 import Repos from "./components/Repos";
+import Updates from "./components/Updates";
 
 
 
@@ -43,7 +44,7 @@ const Li = ({ children }) => <li className="leading-relaxed">{children}</li>
 export default function App() {
   return (
  <main className="min-h-screen font-serif-stack">
-   <div className="max-w-6xl mx-auto px-6 md:px-10 py-10">
+   <div className="max-w-9/10 mx-auto px-6 md:px-10 py-10 pe-10">
         {/* Mobile header with horizontal padding */}
         <header className="lg:hidden flex items-center gap-4 mb-8">
           {/* <img
@@ -58,14 +59,14 @@ export default function App() {
         </header>
 
         {/* Grid layout on md+; using ps-* for left gutter */}
-        <div className="grid lg:grid-cols-[280px_minmax(0,1fr)] items-start gap-8 md:gap-12">
+        <div className="grid lg:grid-cols-[220px_minmax(0,1fr)] items-start gap-4 md:gap-6">
           {/* Sidebar always on left, with gutter from ps-* \./ps-6 md:ps-10 */}
           
             <aside className="hidden lg:block fixed sticky top-16 left-0 self-start h-fit">
             <img
                 src={PROFILE.headshot}
                 alt="Anna Ablove headshot"
-                className="w-[200px] h-[200px] object-cover border border-black/10 rounded-full double-border"
+                className="w-[160px] h-[160px] object-cover border border-black/10 rounded-full double-border"
             />
             <div className="mt-4 space-y-2 text-lg text-zinc-600 leading-relaxed">
                 <div className="font-semibold text-xl text-black">{PROFILE.name}</div>
@@ -93,7 +94,7 @@ export default function App() {
             </aside>
 
           {/* Content column—not full width, capped */}
-          <section className="min-w-0 md:max-w-4xl pr-6 justify-self-start ">
+          <section className="min-w-0 md:max-w-4xl justify-self-start pr-16">
             {/* Title for md+ to align with sidebar top */}
             {/* <div className="hidden md:block mb-6">
               <h1 className="text-3xl font-semibold tracking-tight">{PROFILE.name}</h1>
@@ -101,7 +102,7 @@ export default function App() {
             </div> */}
 
             <section>
-              <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">About</h2>
+              <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">About</h2>
               <p className="leading-relaxed text-[1rem]">
                 My name is Anna Ablove, and I am a Computer Science PhD candidate at the <a class="tlink" href="https://cse.engin.umich.edu/">University of Michigan</a>, 
                 studying under <a class="tlink" href="https://censoredplanet.org/team">Prof. Roya Ensafi</a>. My research centers on network security and Internet freedom, particularly 
@@ -110,13 +111,15 @@ export default function App() {
                 I’ve been interested in how big tech can aid Internet accessibility and transparency.              </p>
             </section>
 
+            <Updates/>
             <Publications />
-            <Articles/>
+
+            {/* <Articles/> */}
             <Media/>
             {/* <Repos /> */}
             <Service />
-            <Grants />
-            <Honors />
+            {/* <Grants /> */}
+            {/* <Honors /> */}
             <Talks />
 
 

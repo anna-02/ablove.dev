@@ -18,7 +18,7 @@ export const grants = [
 export default function Grants() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">Student Grants & Travel Awards</h2>
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">✈️ Student Grants & Travel Awards</h2>
       <ul className="space-y-4">
         {grants.map((g, i) => (
           <li key={i} className="leading-relaxed">

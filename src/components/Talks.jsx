@@ -110,7 +110,7 @@ function TalkTile({ t }) {
 export default function Talks() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3">🎥 Talks</h2>
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">🎥 Talks</h2>
       <div className="grid gap-6 sm:grid-cols-2">
         {talks.map((t, i) => (
           <TalkTile key={i} t={t} />

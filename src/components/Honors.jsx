@@ -12,7 +12,7 @@ export const honors = [
 export default function Honors() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">Research Honors</h2>
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">Research Honors</h2>
       <ul className="space-y-3">
         {honors.map((h, i) => (
           <li key={i} className="leading-relaxed">

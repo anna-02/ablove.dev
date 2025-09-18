@@ -25,7 +25,7 @@ export const mediaItems = [
 export default function Media() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
         📣 In the News 
       </h2>
       <ul className="space-y-4">

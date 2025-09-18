@@ -23,7 +23,7 @@ export const articles = [
 export default function Articles() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
         📝 Research Blogs
       </h2>
       <ul className="space-y-4">

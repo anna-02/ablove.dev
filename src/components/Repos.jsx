@@ -23,7 +23,7 @@ const repos=[
 export default function Repos() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-700">
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-700">
         Open Repositories
       </h2>
 

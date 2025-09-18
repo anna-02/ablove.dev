@@ -115,6 +115,7 @@ function LinksBar({ item }) {
       ))}
     </div>
   );
+
 }
 
 export default function PublicationsFromBib() {
@@ -150,7 +151,7 @@ export default function PublicationsFromBib() {
   if (err) {
     return (
       <section className="mt-10">
-        <h2 className="text-2xl font-semibold mb-3">📖 Publications</h2>
+        <h2 className="text-xl font-semibold mb-3">📖 Publications</h2>
         <p className="text-sm text-red-600">Failed to load publications: {err}</p>
       </section>
     );
@@ -158,8 +159,8 @@ export default function PublicationsFromBib() {
 
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
-        Publications
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">
+        🔗 Publications
       </h2>
       <ul className="space-y-6">
         {items.map((p) => {

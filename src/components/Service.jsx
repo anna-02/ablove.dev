@@ -20,7 +20,7 @@ export const serviceItems = [
 export default function Service() {
   return (
     <section className="mt-10">
-      <h2 className="text-2xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">Service &amp; Leadership</h2>
+      <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">🌍 Service</h2>
 <ul className="list-disc list-outside space-y-3 text-[1.02rem] pl-6">
   {serviceItems.map((s, i) => (
     <li key={i} className="leading-relaxed">
