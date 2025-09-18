@@ -24,8 +24,8 @@ const PROFILE = {
   emailHref: "mailto:aablove@umich.edu",
   website: "https://www.ablove.dev",
   github: "https://github.com/anna-02",
-  linkedin: "https://www.linkedin.com/in/annaablove/",
-  cv: "/cv.pdf",
+  linkedin: "https://www.linkedin.com/in/anna-ablove/",
+  cv: "assets/Ablove_Anna_CV.pdf",
   headshot: "/images/profile3.jpeg",
 }
 
