@@ -52,6 +52,7 @@ function extractExtrasFromBib(bibText) {
       pdf: grab("pdf"),
       website: grab("website"),
       award: grab("award"),
+      rate: grab("rate"),
       raw: raw
     };
 
@@ -181,6 +182,7 @@ export default function PublicationsFromBib() {
           const year = yearOf(p) || "";
           const pdf = p.pdf;
           const award = p.award;
+          const rate = p.rate;
 
           return (
             <li key={p.id || `${p.title}-${year}`}>
@@ -208,11 +210,22 @@ export default function PublicationsFromBib() {
 
               </div>
 
-              <div className="text-md text-zinc-600">
+              {/* <div className="text-md text-zinc-600">
                 {authors}
                 {venue ? <> — <em>{venue}</em></> : null}
                 {year ? `, ${year}` : null}
-              </div>
+              </div> */}
+              <div className="text-md text-zinc-600">
+                {authors}
+                <br />
+                {venue && <><em>{venue}</em></>}
+                {year && `, ${year}`} {rate && (
+                                                <>
+                                                    {" — "}
+                                                    <em>{rate}</em>
+                                                </>
+                                                )}
+                </div>
               <div>{award ? `${award}` : null}</div>
 
               <LinksBar item={p} />

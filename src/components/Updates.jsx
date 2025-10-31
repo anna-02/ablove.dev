@@ -1,6 +1,7 @@
 // src/components/Updates.jsx
 import React from "react";
 
+// https://ooni.org/post/2025-gg-omg-village/
 export const updates = [
   {
     date: "Aug 2024",
@@ -12,16 +13,26 @@ export const updates = [
     sortDate: "2024-11-01",
     text: `I co-authored a LawFare article <a href="https://www.lawfaremedia.org/article/how-geoblocking-limits-digital-access-in-sanctioned-states" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">How Geoblocking Limits Digital Access in Sanctioned States</a>.`,
   },
+      {
+    date: "Nov 2024",
+    sortDate: "2024-11-01",
+    text: `I attended  <a href=" https://www.measurementlab.net/blog/open-measurement-gathering-2/" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Open Measurement Gathering (OMG) 2 </a>in Atlanta, Georgia as a Censored Planet team member.`,
+  },
   {
     date: "Jun 2025",
     sortDate: "2025-06-01",
-    text: `I coordinated the <a href="https://www.youtube.com/playlist?list=PLEszjns3sXFGsa42CYPxrQrFPAfA7v71v" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Open Measurement Gathering 3 (OMG 3) virtual event</a>.`,
+    text: `I coordinated the <a href="https://www.youtube.com/playlist?list=PLEszjns3sXFGsa42CYPxrQrFPAfA7v71v" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">OMG 3 virtual event</a>.`,
   },
   {
     date: "Sep 2025",
     sortDate: "2025-09-01",
     text: `Characterizing the Implementation of Censorship Policies in Chinese LLM Services was accepted to NDSS 2026!`,
   },
+{
+    date: "Sep 2025",
+    sortDate: "2025-09-15",
+    text: `I travelled to Estoril, Portal to host a booth at the <a href="https://ooni.org/post/2025-gg-omg-village/" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Global Gathering</a> on behalf of Censored Planet, as well as attend OMG 4.`,
+  }
 ];
 
 export default function Updates() {
