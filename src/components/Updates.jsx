@@ -28,10 +28,15 @@ export const updates = [
     sortDate: "2025-09-01",
     text: `Characterizing the Implementation of Censorship Policies in Chinese LLM Services was accepted to NDSS 2026!`,
   },
-{
+  {
     date: "Sep 2025",
     sortDate: "2025-09-15",
     text: `I travelled to Estoril, Portal to host a booth at the <a href="https://ooni.org/post/2025-gg-omg-village/" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Global Gathering</a> on behalf of Censored Planet, as well as attend OMG 4.`,
+  },
+    {
+    date: "Nov 2025",
+    sortDate: "2025-11-10",
+    text: `I placed 1st in the <a href="https://cse.engin.umich.edu/stories/outstanding-phd-research-recognized-at-cse-graduate-honors-competition" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">CSE Graduate Honors Competition</a> with my talk Investigating Emerging Private-Sector Censorship Threats!`,
   }
 ];
 
