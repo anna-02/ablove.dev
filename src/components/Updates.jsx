@@ -37,6 +37,11 @@ export const updates = [
     date: "Nov 2025",
     sortDate: "2025-11-10",
     text: `I placed 1st in the <a href="https://cse.engin.umich.edu/stories/outstanding-phd-research-recognized-at-cse-graduate-honors-competition" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">CSE Graduate Honors Competition</a> with my talk Investigating Emerging Private-Sector Censorship Threats!`,
+  },
+    {
+    date: "Feb 2026",
+    sortDate: "2026-02-24",
+    text: `I presented <a href="https://www.ndss-symposium.org/ndss-paper/characterizing-the-implementation-of-censorship-policies-in-chinese-llm-services" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Characterizing the Implementation of Censorship Policies in Chinese LLM Services</a> at NDSS 2026!`,
   }
 ];
 
