@@ -17,6 +17,18 @@ export const talks = [
     // slides: "https://example.com/slides.pdf",
     // talkUrl: "https://vimeo.com/… or conference page if no YouTube",
   },
+    {
+    title: "Characterizing the Implementation of Censorship Policies in Chinese LLM Services",
+    venue: "NDSS",
+    location: "San Diego, CA",
+    date: "February 24, 2026",
+    // If you have a recording on YouTube, set videoId:
+    // e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ -> "dQw4w9WgXcQ"
+    videoId: "x-XlGWOa0yU", // put your real ID here when available https://www.youtube.com/watch?v=x-XlGWOa0yU
+    // Optionals:
+    // slides: "https://example.com/slides.pdf",
+    // talkUrl: "https://vimeo.com/… or conference page if no YouTube",
+  },
   // Add more items here…
 ];
 
