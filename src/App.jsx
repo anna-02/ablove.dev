@@ -25,7 +25,7 @@ const PROFILE = {
   website: "https://www.ablove.dev",
   github: "https://github.com/anna-02",
   linkedin: "https://www.linkedin.com/in/anna-ablove/",
-  cv: "assets/AbloveAnna_CV.pdf",
+  cv: "assets/Ablove-Anna_CV.pdf",
   headshot: "/images/profile3.jpeg",
 }
 
