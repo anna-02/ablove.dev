@@ -2,6 +2,7 @@
 
 Vite + React + Tailwind skeleton for Anna's minimalist site (warm white background, TeXGyrePagella/Palatino serif stack).
 
+
 ## Quick start
 
 ```bash
