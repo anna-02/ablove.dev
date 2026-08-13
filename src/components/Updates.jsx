@@ -42,7 +42,17 @@ export const updates = [
     date: "Feb 2026",
     sortDate: "2026-02-24",
     text: `I presented <a href="https://www.ndss-symposium.org/ndss-paper/characterizing-the-implementation-of-censorship-policies-in-chinese-llm-services" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Characterizing the Implementation of Censorship Policies in Chinese LLM Services</a> at NDSS 2026!`,
-  }
+  },
+    {
+    date: "July 2026",
+    sortDate: "2026-07-24",
+    text: `Our work on Cuba won a Best Practical award at <a href="https://foci.community/awards.htmls" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">FOCI 2026</a>!`,
+  },
+  {
+    date: "Aug 2026",
+    sortDate: "2026-08-13",
+    text: `I presented <a href="https://www.usenix.org/conference/usenixsecurity26/presentation/ablove" target="_blank" rel="noreferrer" class="underline underline-offset-4 hover:opacity-80">Technical Analysis of the Geedge Networks Firewall Source Code Leak</a> at USENIX 2026!`,
+  },
 ];
 
 export default function Updates() {
