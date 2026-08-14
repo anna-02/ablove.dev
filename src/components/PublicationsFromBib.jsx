@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Cite from "citation-js";
+// Inlined at build time so publications render during prerendering, not just
+// in the browser. The file stays in public/ so /publications.bib is still
+// downloadable.
+import bibText from "../../public/publications.bib?raw";
 
 const yearOf = (item) => item?.issued?.["date-parts"]?.[0]?.[0] ?? 0;
 const localfields = ["talk=", "slides=", "pdf="];
@@ -47,7 +51,7 @@ function extractExtrasFromBib(bibText) {
       slides: grab("slides"),
       video: grab("video"),
       code: grab("code"),
-      artifact: grab("artifacat"),
+      artifact: grab("artifact"),
       poster: grab("poster"),
       pdf: grab("pdf"),
       website: grab("website"),
@@ -80,7 +84,6 @@ function formatBibtex(raw) {
 }
 
 function LinksBar({ item }) {
-    console.log(item);
   const links = [];
   const pdf =
     item.pdf ||
@@ -119,44 +122,15 @@ function LinksBar({ item }) {
 
 }
 
+/** Parsed once at module load — identical on the server and in the browser. */
+const bibMap = extractExtrasFromBib(bibText);
+const items = new Cite(bibText)
+  .format("data", { format: "object" })
+  .map((p) => ({ ...p, ...(bibMap[p.id || ""] || {}) }))
+  .sort((a, b) => yearOf(b) - yearOf(a));
+
 export default function PublicationsFromBib() {
-  const [items, setItems] = useState([]);
-  const [bibMap, setBibMap] = useState({});
   const [openBib, setOpenBib] = useState(null);
-  const [err, setErr] = useState("");
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const bibText = await (await fetch("/publications.bib")).text();
-
-        const cite = new Cite(bibText);
-        const csl = cite.format("data", { format: "object" });
-
-        const extrasMap = extractExtrasFromBib(bibText);
-        const merged = csl.map((p) => {
-          const key = p.id || "";
-          return { ...p, ...(extrasMap[key] || {}) };
-        });
-
-        merged.sort((a, b) => yearOf(b) - yearOf(a));
-
-        setItems(merged);
-        setBibMap(extrasMap);
-      } catch (e) {
-        setErr(String(e));
-      }
-    })();
-  }, []);
-
-  if (err) {
-    return (
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold mb-3">📖 Publications</h2>
-        <p className="text-sm text-red-600">Failed to load publications: {err}</p>
-      </section>
-    );
-  }
 
   return (
     <section className="mt-10">
@@ -192,8 +166,7 @@ export default function PublicationsFromBib() {
                     href={pdf.startsWith("http") ? pdf : `/${pdf}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="underline underline-offset-4"
-                    class="tlink"
+                    className="tlink underline underline-offset-4"
                   >
                     {p.title}
                   </a>

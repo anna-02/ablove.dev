@@ -34,8 +34,7 @@ export default function Articles() {
                 href={a.url}
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4"
-                class="tlink"
+                className="tlink underline underline-offset-4"
               >
                 {a.title}
               </a>

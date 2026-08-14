@@ -104,8 +104,8 @@ export default function App() {
             <section>
               <h2 className="text-xl font-semibold mb-3 pb-2 border-b border-zinc-300 dark:border-zinc-300">About</h2>
               <p className="leading-relaxed text-[1rem]">
-                My name is Anna Ablove, and I am a Computer Science PhD candidate at the <a class="tlink" href="https://cse.engin.umich.edu/">University of Michigan</a>, 
-                studying under <a class="tlink" href="https://censoredplanet.org/team">Prof. Roya Ensafi</a>. My research centers on network security and Internet freedom, particularly 
+                My name is Anna Ablove, and I am a Computer Science PhD candidate at the <a className="tlink" href="https://cse.engin.umich.edu/">University of Michigan</a>, 
+                studying under Prof. Roya Ensafi as part of <a className="tlink" href="https://censoredplanet.org/team">Censored Planet</a>. My research centers on network security and Internet freedom, particularly 
                 at the intersection of computer science, policy, and human rights. Generally, I focus on topics such as network 
                 measurement, censorship/geoblocking, and the integration of user perspectives. More recently, 
                 I’ve been interested in how big tech can aid Internet accessibility and transparency.              </p>

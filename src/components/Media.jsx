@@ -48,8 +48,7 @@ export default function Media() {
                 href={m.url}
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4"
-                class="tlink"
+                className="tlink underline underline-offset-4"
               >
                 {m.title}
               </a>
