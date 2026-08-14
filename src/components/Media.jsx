@@ -1,6 +1,18 @@
 import React from "react";
 
 export const mediaItems = [
+    {
+    title: "Outstanding PhD research recognized at CSE Graduate Honors Competition",
+    platform: "University of Michigan CSE",
+    date: "November 2025",
+    url: "https://cse.engin.umich.edu/stories/outstanding-phd-research-recognized-at-cse-graduate-honors-competition"
+    },
+    {
+    title: "How Geoblocking Limits Digital Access in Sanctioned States",
+    platform: "Lawfare",
+    date: "November 2024",
+    url: "https://www.lawfaremedia.org/article/how-geoblocking-limits-digital-access-in-sanctioned-states"
+    },
   {
     title: "CSE authors receive Distinguished Paper Award at USENIX Security for research on geoblocking",
     platform: "University of Michigan CSE",
