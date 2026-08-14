@@ -1,7 +1,7 @@
 // src/App.jsx
 
 import React from 'react'
-import { Mail, Github, Linkedin, FileText } from "lucide-react";
+import { Mail, Github, Linkedin, FileText, GraduationCap, Fingerprint } from "lucide-react";
 
 // in App.jsx
 import Publications from "./components/PublicationsFromBib";
@@ -26,6 +26,8 @@ const PROFILE = {
   github: "https://github.com/anna-02",
   linkedin: "https://www.linkedin.com/in/anna-ablove/",
   cv: "assets/Ablove-Anna_CV.pdf",
+  orcid: "https://orcid.org/0000-0003-3322-4783",
+  googleScholar: "https://scholar.google.com/citations?user=IJnqxkcAAAAJ&hl=en",
   headshot: "/images/profile3.jpeg",
 }
 
@@ -84,6 +86,14 @@ export default function App() {
                 <li className="flex items-center gap-2">
                 <Github className="w-4 h-4 text-zinc-500" />
                 <A href={PROFILE.github}>GitHub</A>
+                </li>
+                <li className="flex items-center gap-2">
+                <GraduationCap className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.googleScholar}>Google Scholar</A>
+                </li>
+                <li className="flex items-center gap-2">
+                <Fingerprint className="w-4 h-4 text-zinc-500" />
+                <A href={PROFILE.orcid}>ORCID</A>
                 </li>
                 <li className="flex items-center gap-2">
                 <FileText className="w-4 h-4 text-zinc-500" />

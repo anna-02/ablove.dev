@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Cite from "citation-js";
 // Inlined at build time so publications render during prerendering, not just
-// in the browser. The file stays in public/ so /publications.bib is still
-// downloadable.
-import bibText from "../../public/publications.bib?raw";
+// in the browser. scripts/prerender.mjs also copies this file into dist/ so
+// /publications.bib stays downloadable.
+import bibText from "../data/publications.bib?raw";
 
 const yearOf = (item) => item?.issued?.["date-parts"]?.[0]?.[0] ?? 0;
 const localfields = ["talk=", "slides=", "pdf="];

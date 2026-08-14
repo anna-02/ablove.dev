@@ -1,6 +1,6 @@
 // Injects server-rendered markup into the built index.html so crawlers that
 // don't execute JavaScript still see the page content.
-import { readFile, writeFile, rm } from 'node:fs/promises'
+import { readFile, writeFile, rm, copyFile } from 'node:fs/promises'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -27,5 +27,12 @@ await writeFile(indexPath, output)
 // GitHub Pages serves 404.html for unknown paths; keep it identical to the app.
 await writeFile(resolve(root, 'dist/404.html'), output)
 await rm(resolve(root, 'dist-server'), { recursive: true, force: true })
+
+// Keep /publications.bib downloadable. The file lives in src/ so it can be
+// imported without Vite's public-directory warning, so it isn't copied for us.
+await copyFile(
+  resolve(root, 'src/data/publications.bib'),
+  resolve(root, 'dist/publications.bib')
+)
 
 console.log(`Prerendered ${html.length} chars into dist/index.html and dist/404.html`)

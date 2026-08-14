@@ -53,17 +53,20 @@ to `createRoot` in dev, where it's empty.
 
 ## Publications
 
-Source of truth is `public/publications.bib`.
+Source of truth is `src/data/publications.bib`.
 
 It's imported at build time in `src/components/PublicationsFromBib.jsx`:
 
 ```js
-import bibText from "../../public/publications.bib?raw";
+import bibText from "../data/publications.bib?raw";
 ```
 
 Parsing happens once at module scope, so the publication list is present in the
-prerendered HTML. The file stays in `public/` so `ablove.dev/publications.bib`
-remains downloadable.
+prerendered HTML.
+
+It lives in `src/` rather than `public/` because Vite warns when you import from
+the public directory. To keep `ablove.dev/publications.bib` downloadable,
+`scripts/prerender.mjs` copies it into `dist/` at the end of the build.
 
 Because it's inlined at build time, **editing the `.bib` requires a rebuild** —
 changing the deployed file alone won't update the page.
